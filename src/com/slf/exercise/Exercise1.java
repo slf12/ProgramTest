@@ -21,6 +21,7 @@ public class Exercise1 {
 		}
 		
 		System.out.println(result);
+		scr.close();
 	}
 
 }
