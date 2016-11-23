@@ -3,17 +3,15 @@ package com.slf.exercise.paint;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
-public class Exercise3 {
+@SuppressWarnings("serial")
+public class Exercise3 extends JFrame{
 
-	private static void createAndShowGUI(){
-		JFrame jFrame = new JFrame("»­Í¼³ÌÐò");
-		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		jFrame.setSize(800, 800);
-		
-		
-		//jFrame.pack();
-		jFrame.setVisible(true);
+	public Exercise3(){
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(800, 600);
+		setTitle("»­Í¼³ÌÐò");
+		setContentPane(new MainPanel());
+		setVisible(true);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,7 +20,7 @@ public class Exercise3 {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				createAndShowGUI();
+				new Exercise3();
 			}
 		});
 	}

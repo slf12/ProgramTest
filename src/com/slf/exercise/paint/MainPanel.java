@@ -1,31 +1,25 @@
 package com.slf.exercise.paint;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Color;
 
+import javax.swing.BoxLayout;
 import javax.swing.JPanel;
-import javax.swing.JToolBar;
 
-public class MainPanel extends JPanel implements ActionListener{
-
-	public  MainPanel() {
-		// TODO Auto-generated constructor stub
-		super(new BorderLayout());
-		JToolBar jToolBar = new JToolBar("tool bar");
-		addButtons(jToolBar);
-		setPreferredSize(new Dimension(600, 600));
-		add(jToolBar, BorderLayout.PAGE_START);
+@SuppressWarnings("serial")
+public class MainPanel extends JPanel{
+	private DrawPanel drawPanel;
+	private ToolBoxPanel toolBoxPanel;
+	
+	public MainPanel(){
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		setBackground(Color.white);
+		buildGui();
 	}
 	
-	public void addButtons(JToolBar toolBar){
-		
+	private void buildGui(){
+		toolBoxPanel = new ToolBoxPanel();
+		drawPanel = new DrawPanel(toolBoxPanel);
+		add(toolBoxPanel);
+		add(drawPanel);
 	}
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
