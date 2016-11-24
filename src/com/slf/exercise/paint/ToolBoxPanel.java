@@ -11,7 +11,12 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import com.slf.exercise.paint.shape.Circle;
 import com.slf.exercise.paint.shape.Line;
@@ -122,6 +127,7 @@ public class ToolBoxPanel extends JPanel{
 		addShapeSection();
 		// 3
 		addColorSection();
+		
 		
 	}
 
